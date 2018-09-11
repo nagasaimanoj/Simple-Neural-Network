@@ -15,8 +15,6 @@ training_set_outputs = array([
     [0]
 ])
 
-seed(1)
-
 synaptic_weights = 2 * random((3, 1)) - 1
 
 for iteration in range(10000):
