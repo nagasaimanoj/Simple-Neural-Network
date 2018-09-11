@@ -1,4 +1,5 @@
-from numpy import array, dot, exp, random
+from numpy import array, dot, exp
+from numpy.random import random, seed
 
 training_set_inputs = array([
     [0, 0, 1],
@@ -14,9 +15,9 @@ training_set_outputs = array([
     [0]
 ])
 
-random.seed(1)
+seed(1)
 
-synaptic_weights = 2 * random.random((3, 1)) - 1
+synaptic_weights = 2 * random((3, 1)) - 1
 
 for iteration in range(10000):
     output = 1 / (1 + exp(-(dot(training_set_inputs, synaptic_weights))))
