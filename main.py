@@ -1,14 +1,15 @@
-from numpy import array, dot, exp, random
+from numpy import array, dot, exp
+from numpy.random import random, seed
 
 
 class NeuralNetwork():
     def __init__(self):
         # Seed the random number generator, so it generates the same numbers every time the program runs.
-        random.seed(1)
+        seed(1)
 
         # We model a single neuron, with 3 input connections and 1 output connection.
         # We assign random weights to a 3 x 1 matrix, with values in the range -1 to 1 and mean 0.
-        self.synaptic_weights = 2 * random.random((3, 1)) - 1
+        self.synaptic_weights = 2 * random((3, 1)) - 1
 
     # The Sigmoid function, which describes an S shaped curve.
     # We pass the weighted sum of the inputs through this function to normalise them between 0 and 1.
