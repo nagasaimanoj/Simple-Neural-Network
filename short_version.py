@@ -21,9 +21,14 @@ weights = array([
 ])
 
 for iteration in range(10000):
-    output = 1 / (1 + exp(-(dot(input_set, weights))))
+    mat_mul = dot(input_set, weights)
 
-    weights += dot(input_set.T,
-                            (output_set - output) * output * (1 - output))
+    prediction = 1 / (1 + exp(-mat_mul))
+    error = output_set - prediction
+
+    weights += dot(
+        input_set.T,
+        error * prediction * (1 - prediction)
+    )
 
 print(1 / (1 + exp(-(dot(array([1, 0, 0]), weights)))))
