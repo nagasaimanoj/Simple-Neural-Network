@@ -31,4 +31,4 @@ for iteration in range(10000):
         error * prediction * (1 - prediction)
     )
 
-print(1 / (1 + exp(-(dot(array([1, 0, 0]), weights)))))
+print("[1, 0, 0] =", 1 / (1 + exp(-(dot(array([1, 0, 0]), weights)))))
