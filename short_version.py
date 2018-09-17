@@ -20,7 +20,7 @@ weights = array([
     [0.]
 ])
 
-for iteration in range(10000):
+for iteration in range(100):
     mat_mul = dot(input_set, weights)
 
     prediction = 1 / (1 + exp(-mat_mul))
