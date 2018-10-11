@@ -7,7 +7,7 @@ A [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) writ
 
 
 ### Usage
-run `main.py` or `short_version.py` with python interpreter
+run `simple_neural_network.py` with python interpreter
 
 
 ### Credits
