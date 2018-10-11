@@ -1,10 +1,10 @@
 from numpy import array, dot, exp
 
 input_set = array([
-    [0, 0, 1],
-    [1, 1, 1],
-    [1, 0, 1],
-    [0, 1, 1]
+    [0, 0],
+    [1, 1],
+    [1, 0],
+    [0, 1]
 ])
 
 output_set = array([
@@ -15,7 +15,6 @@ output_set = array([
 ])
 
 weights = array([
-    [0.],
     [0.],
     [0.]
 ])
@@ -31,4 +30,4 @@ for iteration in range(100):
         error * prediction * (1 - prediction)
     )
 
-print("[1, 0, 0] =", 1 / (1 + exp(-(dot(array([1, 0, 0]), weights)))))
+print("[1, 0] =", 1 / (1 + exp(-(dot(array([1, 0]), weights)))))
