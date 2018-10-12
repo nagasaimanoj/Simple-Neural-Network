@@ -1,5 +1,10 @@
 from numpy import array, dot, exp
 
+
+def sigmoid_func(val):
+    return 1 / (1 + exp(-val))
+
+
 input_set = array([
     [0, 0],
     [1, 1],
@@ -21,8 +26,8 @@ weights = array([
 
 for iteration in range(100):
     mat_mul = dot(input_set, weights)
+    prediction = sigmoid_func(mat_mul)
 
-    prediction = 1 / (1 + exp(-mat_mul))
     error = output_set - prediction
 
     weights += dot(
@@ -30,4 +35,6 @@ for iteration in range(100):
         error * prediction * (1 - prediction)
     )
 
-print("[1, 0] =", 1 / (1 + exp(-(dot(array([1, 0]), weights)))))
+print("[1, 0] =", sigmoid_func(
+    dot(array([1, 0]), weights)
+))
