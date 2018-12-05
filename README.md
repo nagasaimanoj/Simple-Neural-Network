@@ -7,8 +7,8 @@ A [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) writ
 
 
 ### Usage
-run `simple_neural_network.py` with python interpreter
+run `Simple Neural Network.py` with python interpreter
 
 
 ### Credits
-thanks to [Milo Spencer Harper](https://github.com/miloharper) for this code
+thanks to [Milo Spencer Harper](https://github.com/miloharper) for his code
