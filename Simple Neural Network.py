@@ -19,6 +19,11 @@ class SimpleNeuralNetwork:
         """ Sigmoid Function """
         return 1 / (1 + exp(-val))
 
+    @staticmethod
+    def sigmod_func_derivative(prediction):
+        """ derivative of Sigmoid Function """
+        return prediction * (1 - prediction)
+
     def predict(self, pred_vals):
         """ sigmoid(sum(each point * its weight)) """
         return self.sigmoid_func(dot(pred_vals, self.weights))
@@ -33,7 +38,7 @@ class SimpleNeuralNetwork:
             error = input_y - prediction
 
             # updating weights with gradient based on error value
-            self.weights += dot(input_x.T, error * prediction * (1 - prediction))
+            self.weights += dot(input_x.T, error * self.sigmod_func_derivative(prediction))
 
 
 if __name__ == '__main__':
