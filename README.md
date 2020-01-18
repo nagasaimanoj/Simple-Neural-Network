@@ -13,7 +13,8 @@
 > for using in your project, 
 `include this in your project, import and use it as follows`
 
-``` nn = SimpleNeuralNetwork(dimensions)
+```
+    nn = SimpleNeuralNetwork(dimensions)
     nn.train(train_x, train_y, iterations)
     test_y = nn.predict(test_x)
 ```
