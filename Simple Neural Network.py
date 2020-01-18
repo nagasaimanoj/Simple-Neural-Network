@@ -37,6 +37,7 @@ class SimpleNeuralNetwork:
 
 
 if __name__ == '__main__':
+    """ simple example usecase for above module """
     # independent variables for training
     train_x = array([
         [0, 0], [1, 1], [1, 0], [0, 1]
